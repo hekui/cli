@@ -1,17 +1,18 @@
 
 <template>
-  <div class="{{name}}-page">
-    {{name}} component. props value: {{prop1}}.
+  <div class="toast-page">
+    toast component. props value: {{prop1}}.
   </div>
 </template>
 <script>
   export default {
-    name: '{{name}}',
+    name: 'toast',
     props: {
       prop1: {
         type: String,
         default: 'default'
       },
+      prop2: String,
     },
     computed: {
       //
@@ -22,7 +23,7 @@
   };
 </script>
 <style lang="scss">
-.{{name}}-component{
+.toast-component{
 
 }
 </style>

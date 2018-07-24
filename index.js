@@ -1,9 +1,9 @@
 #! node
 
-// import CLI from './cli'
-const CLI = require('./utils/cli')
-const PAGE = require('./utils/page')
-const COMPONENT = require('./utils/component')
+const path = require('path')
+const CLI = require('./cli')
+const PAGE = require('./page')
+const COMPONENT = require('./component')
 
 const actionOptions = ['page', 'component', 'module']
 // module：store下面一个模块module
@@ -80,8 +80,8 @@ let dir
 // 开始创建
 switch(config.action){
   case 'page':
-    dir = `${PATH}/${config.dirPage}/${config.name}`
-    // console.log('dir', dir)
+    dir = path.resolve(`${PATH}/${config.dirPage}/${config.name}`)
+    console.log('dir', dir)
     PAGE.init(config)
     PAGE.begin(dir)
     break;
@@ -94,7 +94,7 @@ switch(config.action){
   case 'module':
     dir = `${PATH}/${config.dirModule}/`
     CLI.mkdirs(dir, () => {
-      CLI.copyTemplate('./module/index.js', `${dir}/${config.name}.js`)
+      CLI.copyTemplate('/module/index.js', `${dir}/${config.name}.js`)
       console.log('[success]created a module at: ', dir)
     })
     break;

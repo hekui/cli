@@ -12,9 +12,9 @@ class PAGE{
   }
   createComponent(dir){
     CLI.mkdirs(dir, () => {
-      CLI.copyTemplate('./component/index.js', `${dir}/index.js`)
+      CLI.copyTemplate('/component/index.js', `${dir}/index.js`)
       CLI.mkdirs(`${dir}/src`, () => {
-        CLI.copyTemplate('./component/src/index.vue', `${dir}/src/${this.config.name}.vue`)
+        CLI.copyTemplate('/component/src/index.vue', `${dir}/src/${this.config.name}.vue`)
         console.log('[success]created a component at: ', dir)
       })
     })
