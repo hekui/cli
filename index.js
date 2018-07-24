@@ -1,9 +1,9 @@
 #! node
 
 const path = require('path')
-const CLI = require('./cli')
-const PAGE = require('./page')
-const COMPONENT = require('./component')
+const CLI = require('./utils/cli')
+const PAGE = require('./utils/page')
+const COMPONENT = require('./utils/component')
 
 const actionOptions = ['page', 'component', 'module']
 // module：store下面一个模块module
