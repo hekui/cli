@@ -32,18 +32,18 @@ $ cli <commmand> [<args>]   // 将在项目的 /src/pages/ 下创建一个 about
 ## 命令参数
 ```javascript
 $ cli -h // 查看帮助
-$ cli page[ -n] about[ -d src/views][ -m]
+$ cli page[ -n] <name>[ -d <dir>][ -m]
 // -n 页面名称，可在第一个参数中省略-n指定。必须参数
 // -d 页面生成目录，默认值：./src/pages。可选参数
 // -m 页面生成多文件，默认为false（单文件）, 若带该命令，则对应页面的js,css会单独生成文件。可选参数
 
-$ cli component 
+$ cli component[ -n] <name>[ -d <dir>]
 // -n 组件名称，可在第一个参数中省略-n指定。必须参数
-// -d 组件生成目录，默认值：./src/pages。可选参数
+// -d 组件生成目录，默认值：./src/components。可选参数
 
-$ cli module 
+$ cli module[ -n] <name>[ -d <dir>]
 // -n 模块名称，可在第一个参数中省略-n指定。必须参数
-// -d 模块生成目录，默认值：./src/pages。可选参数
+// -d 模块生成目录，默认值：./src/store。可选参数
 ```
 
 ## 示例命令
@@ -53,4 +53,7 @@ $ cli page about                    // 将在项目根目录的 ./src/pages/ 下
 $ cli page about -m                 // 将在项目根目录的 ./src/pages/ 下创建一个 about 目录，并在目录中生成 index.vue、script.js、style.scss 三个文件(多文件方式)
 $ cli page -n about -d src/views -m // 将在项目根目录的 ./src/views/ 下创建一个 about 目录，并在目录中生成 index.vue、script.js、style.scss 三个文件(多文件方式)
 
+$ cli component name 
+
+$ cli module user 
 ```
