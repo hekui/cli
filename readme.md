@@ -13,12 +13,11 @@ $ npm install -g
 
 # 使用方法
 在安装本工具后，就可在你的任意项目（根目录）中使用命令快速创建页面/组件/模块了。  
-输出命令： `cli`。   
+输出命令： `cli`   
 
 命令格式： 
-
 ```javascript
-$ cli <commmand> [<args>]   // 将在项目的 /src/pages/ 下创建一个 about 的页面
+$ cli <commmand>[ -n] <name>[ <args>]
 ```
 
 输出命令可在项目的 `config.json` 中修改 `bin` 字段下的值，来修改为其他命令。  
@@ -53,7 +52,8 @@ $ cli page about                    // 将在项目根目录的 ./src/pages/ 下
 $ cli page about -m                 // 将在项目根目录的 ./src/pages/ 下创建一个 about 目录，并在目录中生成 index.vue、script.js、style.scss 三个文件(多文件方式)
 $ cli page -n about -d src/views -m // 将在项目根目录的 ./src/views/ 下创建一个 about 目录，并在目录中生成 index.vue、script.js、style.scss 三个文件(多文件方式)
 
-$ cli component name 
+$ cli component toast               // 将在项目根目录的 ./src/components/ 下创建一个 toast 目录，并在目录中生成 index.js、src/toast.vue 两个文件
 
-$ cli module user 
+$ cli module user                   // 将在项目根目录的 ./src/store/ 下创建一个 user.js 文件
 ```
+具体文件内容见 `templates` 目录下模板文件。
